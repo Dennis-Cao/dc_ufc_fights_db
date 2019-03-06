@@ -180,8 +180,8 @@ def merge_data(df):
     # We're always asking for json because it's the easiest to deal with
     morph_api_url = "https://api.morph.io/jasonchanhku/ufc_fighters_db/data.json"
 
-    # Keep this key secret!
-    morph_api_key = "mF/o1gYK/7iCHIu5h5Sw"
+    # Keep this key secret using morph secret variables
+    morph_api_key = ENV['MORPH_API_KEY']
 
     r = requests.get(morph_api_url, params={
       'key': morph_api_key,
