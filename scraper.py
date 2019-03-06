@@ -7,6 +7,7 @@ import re
 import datetime
 import sqlite3
 import time
+import os
 
 all_links = []
 location = []
@@ -181,7 +182,7 @@ def merge_data(df):
     morph_api_url = "https://api.morph.io/jasonchanhku/ufc_fighters_db/data.json"
 
     # Keep this key secret using morph secret variables
-    morph_api_key = ENV['MORPH_API_KEY']
+    morph_api_key = os.environ['MORPH_API_KEY']
 
     r = requests.get(morph_api_url, params={
       'key': morph_api_key,
