@@ -1,0 +1,7 @@
+# It's easy to add more libraries or choose different versions. Any libraries
+# specified here will be installed and made available to your morph.io scraper.
+# Find out more: https://morph.io/documentation/python
+beautifulsoup4==4.6.0
+pandas==0.23.0
+numpy==1.14.3
+requests==2.18.4
