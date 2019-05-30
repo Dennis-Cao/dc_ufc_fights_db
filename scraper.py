@@ -208,7 +208,7 @@ def merge_data(df):
 
 scrape_data()
 df = create_df()
-df = merge_data(df)
+# df = merge_data(df)
 
 conn = sqlite3.connect('data.sqlite')
 df.to_sql('data', conn, if_exists='replace')
