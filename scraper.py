@@ -171,9 +171,9 @@ def suba_delta(df):
 
 def age_delta(df):
     if df["Favourite"] == "f1":
-        return df["AGE_x"] - df["AGE_y"]
+        return df["Age_x"] - df["Age_y"]
     else:
-        return df["AGE_y"] - df["AGE_x"]
+        return df["Age_y"] - df["Age_x"]
 
 
 def merge_data(df):
