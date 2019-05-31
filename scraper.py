@@ -169,6 +169,12 @@ def suba_delta(df):
     else:
         return df["SUBA_y"] - df["SUBA_x"]
 
+def age_delta(df):
+    if df["Favourite"] == "f1":
+        return df["AGE_x"] - df["AGE_y"]
+    else:
+        return df["AGE_y"] - df["AGE_x"]
+
 
 def merge_data(df):
     
@@ -201,8 +207,9 @@ def merge_data(df):
     test2["TDA_delta"] = test2.apply(tda_delta, axis=1)
     test2["TDD_delta"] = test2.apply(tdd_delta, axis=1)
     test2["SUBA_delta"] = test2.apply(suba_delta, axis=1)
+    test2["AGE_delta"] = test2.apply(age_delta, axis=1)
     
-    final_df = test2[['Events', 'Location', 'Fighter1', 'Fighter2', 'Favourite', 'Label', 'REACH_delta', 'SLPM_delta', 'SAPM_delta', 'STRA_delta', 'STRD_delta', 'TD_delta', 'TDA_delta', 'TDD_delta', 'SUBA_delta', 'Odds_delta']]
+    final_df = test2[['Events', 'Location', 'Fighter1', 'Fighter2', 'Favourite', 'Label', 'REACH_delta', 'SLPM_delta', 'SAPM_delta', 'STRA_delta', 'STRD_delta', 'TD_delta', 'TDA_delta', 'TDD_delta', 'SUBA_delta', "AGE_delta", 'Odds_delta']]
     
     return final_df
 
